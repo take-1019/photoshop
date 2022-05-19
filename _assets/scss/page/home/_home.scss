@@ -1,0 +1,194 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* ========================
+ヘッダー
+======================== */
+html {
+    font-size: 62.5%; //基準が10pxになる。
+    font-family: NotoSansJP;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  background-image: linear-gradient(to top, #4b6cb7, #182848);
+}
+
+.header__logo {
+  padding-left: 39px;
+  padding-right: 27px;
+}
+
+.header__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  font-size: 1.6rem;
+  a {
+  &:hover {
+    opacity: 0.7;
+  }
+  }
+  span {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+  }
+  li {
+    position: relative;
+  &:not(:last-child)::after {
+    position: absolute;
+    top: 1px;
+    height: 2.8rem;
+    content: '';
+    border-right: solid 1px;
+    right: -17px;
+    transform: rotate(40deg);
+    }
+  }
+}
+
+/* ========================
+トップ画面
+======================== */
+.main__wrapper {
+  background: linear-gradient( #4b6cb7, #182848);
+  width: 100%;
+  height: 688px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main__inner {
+  position: absolute;
+  top: 107px;
+  left: 174px;
+  z-index: 10;
+}
+
+.swiper-wrapper .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 688px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.top__title {
+  color: #ffffff;
+  font-size: 9.6rem;
+  font-weight: 900;
+  text-shadow: 4.2px 4.2px 4px rgba(24, 40, 72, 0.5);
+  line-height: 1.17;
+  letter-spacing: -7.92px;
+  margin-bottom: 40px;
+}
+
+.top__text-wrapper {
+margin-left: 20px;
+}
+
+.top__text {
+  width: 323px;
+  line-height: 64px;
+  color: #182848;
+  font-weight: bold;
+  // padding: 12px 48px 21px 58px;
+  margin-bottom: 12px;
+  margin-top: -25px;
+  transform: skewX(-35deg);
+  p {
+    transform: skewX(35deg);
+  }
+}
+
+.top__text2 {
+  width: 480px;
+  line-height: 64px;
+  color: #182848;
+  font-weight: bold;
+  // padding: 12px 47px 21px 56px;
+  margin-bottom: 12px;
+  transform: skewX(-35deg);
+  p {
+    transform: skewX(35deg);
+  }
+}
+
+.top__text, .top__text2 {
+  background-color: #ffffff;
+  font-size: 3.2rem;
+  text-align: center;
+  position: relative;
+  height: 64px;
+  box-shadow: 8px 8px 0px -1px #182848;
+}
+
+.top__news {
+  margin-top: 123px;
+  display: flex;
+  font-size: 1.6rem;
+  height: 64px;
+  line-height: 64px;
+  background-color: #182848;
+  width: 1017px;
+}
+
+.top__news-title {
+  color: #ffffff;
+  background-color: #182848;
+  width: 175px;
+  padding-left: 42px;
+}
+
+.top__news-item {
+  width: 770px;
+  padding-left: 47px;
+  color: #191919;
+  display: flex;
+  background-color: #ffffff;
+  transform: skewx(-40deg);
+  margin-left: -22px;
+  a {
+    transform: skewX(40deg);
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+  span {
+    background-color: #b8614b;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    margin-left: 19px;
+    border-radius: 6px;
+  }
+    &::after {
+    content: "";
+    width: 2rem;
+    height: 0.25rem;
+    top: 50%;
+    right: -50px;
+    border-bottom: solid 1px #fff;
+    border-right: solid 1px #fff;
+    position: absolute;
+    -webkit-transform: translateY(-50%) skew(45deg);
+    transform: translateY(-50%) skew(45deg);
+  }
+  time {
+    letter-spacing: -1px;
+  }
+}
+
+.new {
+  display: inline-block;
+  margin-left: 20px;
+}

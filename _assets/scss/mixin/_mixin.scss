@@ -1,0 +1,64 @@
+@use '../setting/setting' as s;
+
+//ブレイクポイント変数設定
+$mq-breakpoints:
+("xs": 320px,
+"sp": 480px,
+"tab": 768px,
+"pc" : 1025px,
+"full": 1100px,
+"max":1250px);
+/********************/
+
+// スマホ基準(〜以上)
+@mixin minmq($breakpoint: sp) {
+	@media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+		@content;
+	}
+}
+
+// PC基準(〜未満)
+@mixin maxmq($breakpoint: sp) {
+	@media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+		@content;
+	}
+}
+
+// line-height
+@mixin l_height($pixels , $height) {
+	font-size: $pixels * 1px;
+	line-height: $height / $pixels;
+}
+
+// 呼び出し例
+.class {
+	@include l_height(18 , 30);
+}
+
+// letter-spacing
+@mixin l_spacing($spacing) {
+	letter-spacing: ($spacing / 1000 ) + em;
+}
+
+// 呼び出し例
+.class {
+	@include l_spacing(200);
+}
+
+@mixin background(
+  $color: transparent,
+  $image,
+  // 呼び出し側：ulr(../img/)など
+  $repeat: no-repeat,
+  $position-x: center,
+  $position-y: center,
+  $size: cover
+) {
+  background: {
+    color: $color;
+    image: $image;
+    repeat: $repeat;
+    position: $position-x $position-y;
+    size: $size;
+  }
+}
