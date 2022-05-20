@@ -828,6 +828,309 @@ html {
   -webkit-transform: translateY(-50%) skew(45deg);
   transform: translateY(-50%) skew(45deg);
 }
+.btn--arrow-right::after:hover {
+  border-bottom: solid 1px #4b6cb7;
+  border-right: solid 1px #4b6cb7;
+}
+
+/* ========================
+園崎組について
+======================== */
+.about__wrapper {
+  margin-top: 160px;
+  background-image: url(../img/pc/background-image-about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 656px;
+  padding-top: 40px;
+}
+
+.about__inner {
+  max-width: 504px;
+  margin-left: 175px;
+  background-color: #ffffff;
+  padding: 48px 75px 48px 48px;
+}
+
+.about__title {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.about__title h2 {
+  font-size: 4.1rem;
+  font-weight: bold;
+}
+.about__title::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 31px;
+  position: absolute;
+  background-color: #4b6cb7;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 15px;
+  right: 195px;
+}
+
+.about__text-contents {
+  font-size: 1.6rem;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.about__img {
+  margin-top: 32px;
+}
+
+/* ========================
+実績
+======================== */
+.card {
+  -webkit-box-shadow: 0 0 10px 0 rgba(25, 25, 25, 0.25);
+          box-shadow: 0 0 10px 0 rgba(25, 25, 25, 0.25);
+}
+
+.card__img-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.card__img {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.card__body {
+  padding: 5px 17px 32px 34px;
+  background-color: #ffffff;
+}
+.card__body:last-child {
+  margin-bottom: 0;
+}
+
+.card__title {
+  margin-bottom: 5px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #b8614b;
+}
+
+.card__text {
+  color: #191919;
+  font-size: 1.6rem;
+  padding-top: 20px;
+  line-height: 1.7;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.works__item {
+  margin-bottom: 39px;
+}
+
+.works__item > .cards__item {
+  width: 50%;
+}
+
+.works__wrapper {
+  margin-top: -767px;
+}
+
+.works__inner {
+  max-width: 984px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.works__title {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.works__title h2 {
+  font-size: 4.1rem;
+  font-weight: bold;
+}
+.works__title::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 31px;
+  position: absolute;
+  background-color: #4b6cb7;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 15px;
+  right: 480px;
+}
+
+.works__text {
+  font-size: 3.2rem;
+  font-weight: 500;
+  padding-top: 25px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.works__text-contents {
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 21px;
+  padding-bottom: 48px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.center-btn {
+  text-align: center;
+}
+
+.card__badge {
+  position: relative;
+}
+.card__badge::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.card__badge-text {
+  position: absolute;
+  z-index: 2;
+  top: -2rem;
+  left: -2rem;
+  color: #ffffff;
+  font-size: 2.4rem;
+  background-color: #182848;
+  padding: 19px 14px;
+}
+
+.works-bg {
+  background-color: #f0f0f0;
+  position: relative;
+  height: 435px;
+  z-index: -3;
+  margin-top: 160px;
+  overflow: hidden;
+  height: 767px;
+}
+
+.works-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 23px;
+  width: 96vw;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-transform: skew(40deg);
+          transform: skew(40deg);
+  z-index: -1;
+}
+
+/* ========================
+採用
+  ======================== */
+.recruit__wrapper {
+  margin-top: 160px;
+  background-color: #f0f0f0;
+  padding-bottom: 80px;
+}
+
+.recruit__inner {
+  max-width: 1008px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 81px;
+}
+
+.recruit__title {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 54px;
+}
+.recruit__title h2 {
+  font-size: 4.1rem;
+  font-weight: bold;
+}
+.recruit__title::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 31px;
+  position: absolute;
+  background-color: #4b6cb7;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 15px;
+  right: 450px;
+}
+
+.recruit__item-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.recruit-btn {
+  display: inline-block;
+  width: 256px;
+  max-width: 100%;
+  padding: 24px 40px 24px 10px;
+  background-color: rgba(24, 40, 72, 0.64);
+  opacity: 0.64;
+  -webkit-box-shadow: 0 2px 4px rgba(24, 40, 72, 0.46);
+          box-shadow: 0 2px 4px rgba(24, 40, 72, 0.46);
+  color: #ffffff;
+  font-size: 1.6rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.recruit-btn:hover {
+  background-color: #ffffff;
+  color: #4b6cb7;
+}
 
 /* -----------------------------------------------
 * Page エントリーポイント
