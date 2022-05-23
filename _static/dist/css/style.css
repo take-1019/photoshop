@@ -1085,7 +1085,7 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 54px;
+  margin-bottom: 45px;
 }
 .recruit__title h2 {
   font-size: 4.1rem;
@@ -1110,7 +1110,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   gap: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
 }
 
 .recruit-btn {
@@ -1118,7 +1118,7 @@ html {
   width: 256px;
   max-width: 100%;
   padding: 24px 40px 24px 10px;
-  background-color: rgba(24, 40, 72, 0.64);
+  background-color: #182848;
   opacity: 0.64;
   -webkit-box-shadow: 0 2px 4px rgba(24, 40, 72, 0.46);
           box-shadow: 0 2px 4px rgba(24, 40, 72, 0.46);
@@ -1130,6 +1130,169 @@ html {
 .recruit-btn:hover {
   background-color: #ffffff;
   color: #4b6cb7;
+}
+
+.recruit__position-2 {
+  padding-top: 39px;
+}
+
+.recruit__position-1 {
+  padding-top: 79px;
+}
+
+.recruit__img {
+  position: relative;
+}
+
+.recruit__btn {
+  bottom: 33px;
+  left: 28px;
+  z-index: 3;
+  text-align: left;
+  padding: 18px 22px 20px 17px;
+  width: 265px;
+}
+
+/* ========================
+お問い合わせ
+======================== */
+.contact__wrapper {
+  background-image: url(../img/pc/bckground-image-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact__inner {
+  padding-top: 73px;
+  color: #ffffff;
+  max-width: 1366px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.contact__title {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 22px;
+}
+.contact__title h2 {
+  font-size: 4.1rem;
+  font-weight: bold;
+}
+.contact__title::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 31px;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 15px;
+  right: 645px;
+}
+
+.contact__subtitle {
+  color: #ffffff;
+}
+
+.contact__text {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.contact-btn {
+  margin-top: 50px;
+  max-width: 720px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 80px;
+}
+
+.construction-btn {
+  width: 320px;
+  background-color: #b8614b;
+  position: relative;
+  text-align: left;
+  padding-left: 113px;
+  padding-top: 28px;
+}
+.construction-btn::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.4rem;
+  top: 50%;
+  right: 5em;
+  border-bottom: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  -webkit-transform: translateY(-50%) skew(45deg);
+  transform: translateY(-50%) skew(45deg);
+}
+
+.order-btn {
+  width: 320px;
+  background-color: #191919;
+  position: relative;
+  text-align: left;
+  padding-left: 95px;
+  padding-top: 28px;
+}
+
+.construction, .order {
+  position: relative;
+}
+
+.order {
+  position: relative;
+}
+.order::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.4rem;
+  top: 50%;
+  right: 6.5em;
+  border-bottom: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  -webkit-transform: translateY(-50%) skew(45deg);
+  transform: translateY(-50%) skew(45deg);
+}
+
+.construction-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 70px;
+}
+
+.order-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 59px;
 }
 
 /* -----------------------------------------------
