@@ -10,6 +10,8 @@ html {
 }
 
 .header {
+  // position: fixed;
+  z-index: 9999;
   width: 100%;
   height: 80px;
   display: flex;
@@ -53,14 +55,46 @@ html {
   }
 }
 
-.header.headerColorScroll {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  color: #191919;
-  transition: color 0.4s ease-out;
+.-after {
+  display: none;
 }
+
+.headerLogoScroll.-before {
+  display: none;
+}
+
+.headerLogoScroll.-after {
+  display: block;
+}
+
+/* スティッキー時に.stickyクラスを追加 */
+.header.sticky {
+  position: fixed; /* 上に固定 */
+  top: 0; /* 上からスッと表示させる（重要！） */
+  margin-top: 0; /* 0にすることでtopで上に配置 */
+  background-color: #ffffff;
+  background-image: none;
+  .header__item {
+    color: #000000;
+  }
+  .header__menu-list {
+    color: #000000;
+  }
+  .toggle_btn span {
+    background-color: #000000;
+  }
+}
+
+.header__menu-list.sticky {
+  a {
+    color: #000000;
+  }
+}
+/* ========================
+SPメニュー
+======================== */
+
+
 
 /* ========================
 トップ画面
