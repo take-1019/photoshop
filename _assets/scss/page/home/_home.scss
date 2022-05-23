@@ -53,6 +53,15 @@ html {
   }
 }
 
+.header.headerColorScroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  color: #191919;
+  transition: color 0.4s ease-out;
+}
+
 /* ========================
 トップ画面
 ======================== */
@@ -731,4 +740,59 @@ margin-left: 20px;
   top: 50%;
   transform: translateY(-50%);
   left: 59px;
+}
+
+/* ========================
+フッター
+======================== */
+.footer__wrapper {
+  background-color: #182848;
+}
+
+.footer__inner {
+  max-width: 1016px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.footer__logo {
+  padding-top: 83px;
+}
+
+.footer__item {
+  padding-bottom: 94px;
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding-top: 38px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__menu {
+  writing-mode: vertical-lr;
+  letter-spacing: 3.5px;
+  li {
+    padding-left: 22px;
+    &:nth-child(5) {
+      padding-left: 70px;
+    }
+  }
+}
+
+.company {
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.copyright {
+  height: 60px;
+  line-height: 60px;
+  background-color: #191919;
+  color: #ffffff;
+  padding-left: 17.5rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
 }
