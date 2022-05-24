@@ -271,6 +271,9 @@ margin-left: 20px;
   color: #191919;
   margin-top: -400px;
   z-index: 10;
+  @include maxmq(pc) {
+    margin-top: 40px;
+  }
 }
 
 .slant-bg {
@@ -280,9 +283,12 @@ margin-left: 20px;
     z-index: -1;
     margin-top: 160px;
     overflow: hidden;
+    // @include maxmq(pc) {
+    //   top: 471px;
+    //   left: 0;
+    // }
     @include maxmq(pc) {
-      top: 471px;
-      left: 0;
+      display: none;
     }
 }
 
@@ -296,6 +302,9 @@ margin-left: 20px;
     background-color: #ffffff;
     transform: skew(-40deg);
     z-index: -1;
+        @include maxmq(pc) {
+      display: none;
+    }
   }
 
 .services__inner  {
@@ -311,12 +320,16 @@ margin-left: 20px;
   width: 620px;
   height: auto;
   margin-right: 48px;
-  @include maxmq(tab) {
+  @include maxmq(pc) {
+    // width: 580px;
+  }
+  @include maxmq(pc) {
     margin-right: 0;
     width: 100%;
   }
   img {
-    @include maxmq(tab) {
+    object-fit: cover;
+    @include maxmq(pc) {
       width: 100%;
     }
   }
@@ -342,22 +355,54 @@ margin-left: 20px;
     transform: rotate(40deg);
     top: 15px;
     right: 285px;
-    @include maxmq(tab) {
+    @include maxmq(pc) {
       left: 237px;
     }
+    @include maxmq(sp) {
+      left: 184px;
+      top: 10px;
+    }
   }
-  @include maxmq(tab) {
+  @include maxmq(pc) {
     position: relative;
   }
 }
 
-.service__item {
-  @include maxmq(tab) {
+.services__item {
+    margin-right: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -26px;
+    width: 50vw;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skew(-30deg);
+    z-index: -1;
+    @include minmq(pc) {
+      display: none;
+    }
+  }
+  @include maxmq(pc) {
+    // margin-right: 20px;
+  }
+  @include maxmq(pc) {
     padding-top: 40px;
+    padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 27px;
+    background-color: #f0f0f0;
+    margin-right: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+  }
+  @include maxmq(sp) {
+    // padding-bottom: 40px;
   }
 }
+
 
 .sub__title {
   color: #4b6cb7;
@@ -376,6 +421,9 @@ margin-left: 20px;
   font-weight: 500;
   padding-top: 25px;
   line-height: 1.5;
+    @include maxmq(tab) {
+    font-size: 2.4rem;
+  }
 }
 
 .services__text-contents {

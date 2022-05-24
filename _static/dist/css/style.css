@@ -784,6 +784,10 @@ SPメニュー
   height: auto;
   margin-right: 48px;
 }
+.services__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .services__title {
   position: relative;
@@ -809,6 +813,21 @@ SPメニュー
   right: 285px;
 }
 
+.services__item {
+  margin-right: 10px;
+}
+.services__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -26px;
+  width: 50vw;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+  z-index: -1;
+}
 .sub__title {
   color: #4b6cb7;
   font-size: 2.4rem;
@@ -1496,23 +1515,8 @@ nav .inner ul li a:hover {
     -webkit-transform: none;
             transform: none;
   }
-  .services__img {
-    margin-right: 0;
-    width: 100%;
-  }
-  .services__img img {
-    width: 100%;
-  }
-  .services__title::after {
-    left: 237px;
-  }
-  .services__title {
-    position: relative;
-  }
-  .service__item {
-    padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 27px;
+  .services__text {
+    font-size: 2.4rem;
   }
   .link-btn {
     text-align: center;
@@ -1654,9 +1658,14 @@ nav .inner ul li a:hover {
   }
 }
 @media screen and (max-width: 1025px) {
+  .services__wrapper {
+    margin-top: 40px;
+  }
   .slant-bg {
-    top: 471px;
-    left: 0;
+    display: none;
+  }
+  .slant-bg::before {
+    display: none;
   }
   .services__inner {
     -webkit-box-orient: vertical;
@@ -1664,6 +1673,30 @@ nav .inner ul li a:hover {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .services__img {
+    margin-right: 0;
+    width: 100%;
+  }
+  .services__img img {
+    width: 100%;
+  }
+  .services__title::after {
+    left: 237px;
+  }
+  .services__title {
+    position: relative;
+  }
+  .services__item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 27px;
+    background-color: #f0f0f0;
+    margin-right: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
   }
   .recruit__item-wrapper {
     -webkit-box-orient: vertical;
@@ -1676,6 +1709,10 @@ nav .inner ul li a:hover {
 @media screen and (max-width: 480px) {
   .services__title h2 {
     font-size: 3.2rem;
+  }
+  .services__title::after {
+    left: 184px;
+    top: 10px;
   }
   .sub__title {
     padding-left: 31px;
@@ -1719,6 +1756,11 @@ nav .inner ul li a:hover {
     line-height: 42px;
     height: 42px;
     padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .services__item::before {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
