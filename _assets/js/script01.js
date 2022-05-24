@@ -8,29 +8,6 @@ let mySwiper = new Swiper(".swiper", {
   speed: 2000,
 });
 
-// スクロールするとロゴの色変更
-$(function () {
-  $(window).on("scroll", function () {
-    const sliderHeight = $(".mv").height();
-    if (sliderHeight - 30 < $(this).scrollTop()) {
-      $(".js-header").addClass("headerColorScroll");
-    } else {
-      $(".js-header").removeClass("headerColorScroll");
-    }
-  });
-});
-
-$(function() {
-(window).on('scroll', function () {
-  if (400 < jQuery(this).scrollTop()) {
-  jQuery('.js-header').addClass('headerColorScroll');
-  } else {
-    jQuery('.js-header').removeClass('headerColorScroll');
-  }
-});
-});
-
-
 $(function () {
   $(window).on("load scroll", function () {
     var $header = $(".header");
@@ -57,3 +34,23 @@ $(function () {
     }
   });
 });
+
+//ハンバーガーメニュー
+(function ($) {
+  var $nav = $("#navArea");
+  var $btn = $(".toggle_btn");
+  var $mask = $("#mask");
+  var open = "open"; // class
+  // menu open close
+  $btn.on("click", function () {
+    if (!$nav.hasClass(open)) {
+      $nav.addClass(open);
+    } else {
+      $nav.removeClass(open);
+    }
+  });
+  // mask close
+  $mask.on("click", function () {
+    $nav.removeClass(open);
+  });
+})(jQuery);
