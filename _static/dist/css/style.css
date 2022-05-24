@@ -797,6 +797,7 @@ SPメニュー
   display: flex;
 }
 .services__title h2 {
+  position: relative;
   font-size: 4.1rem;
   font-weight: bold;
 }
@@ -810,7 +811,7 @@ SPメニュー
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   top: 15px;
-  right: 285px;
+  left: 240px;
 }
 
 .services__item {
@@ -1002,6 +1003,7 @@ SPメニュー
 
 .works__item {
   margin-bottom: 39px;
+  padding: 0 25px;
 }
 
 .works__item > .cards__item {
@@ -1021,7 +1023,6 @@ SPメニュー
 }
 
 .works__title {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1032,10 +1033,11 @@ SPメニュー
           justify-content: center;
 }
 .works__title h2 {
+  position: relative;
   font-size: 4.1rem;
   font-weight: bold;
 }
-.works__title::after {
+.works__title h2::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -1045,7 +1047,7 @@ SPメニュー
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   top: 15px;
-  right: 480px;
+  left: 180px;
 }
 
 .works__text {
@@ -1135,7 +1137,6 @@ SPメニュー
 }
 
 .recruit__title {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1147,10 +1148,11 @@ SPメニュー
   margin-bottom: 45px;
 }
 .recruit__title h2 {
+  position: relative;
   font-size: 4.1rem;
   font-weight: bold;
 }
-.recruit__title::after {
+.recruit__title h2::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -1160,7 +1162,7 @@ SPメニュー
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   top: 15px;
-  right: 450px;
+  left: 213px;
 }
 
 .recruit__item-wrapper {
@@ -1559,15 +1561,14 @@ nav .inner ul li a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .works__item {
+    padding: 0;
+  }
   .works__item > .cards__item {
     width: 100%;
   }
   .works__title {
     padding-top: 30px;
-  }
-  .works__title::after {
-    right: 300px;
-    top: 45px;
   }
   .works__text {
     text-align: left;
@@ -1584,7 +1585,7 @@ nav .inner ul li a:hover {
     top: 0;
     left: 0;
   }
-  .recruit__title::after {
+  .recruit__title h2::after {
     right: 237px;
   }
   .recruit__item-wrapper {
@@ -1721,8 +1722,19 @@ nav .inner ul li a:hover {
   .about__title h2 {
     font-size: 3.2rem;
   }
+  .about__title::after {
+    left: 140px;
+  }
+  .works__title h2::after {
+    left: 146px;
+    top: 10px;
+  }
   .works__title h2 {
     font-size: 3.2rem;
+  }
+  .recruit__title h2::after {
+    left: 170px;
+    top: 10px;
   }
   .recruit__title h2 {
     font-size: 3.2rem;

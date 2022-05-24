@@ -339,6 +339,7 @@ margin-left: 20px;
   position: relative;
   display: flex;
   h2 {
+    position: relative;
     font-size: 4.1rem;
     font-weight: bold;
     @include maxmq(sp) {
@@ -354,7 +355,7 @@ margin-left: 20px;
     background-color: #4b6cb7;
     transform: rotate(40deg);
     top: 15px;
-    right: 285px;
+    left: 240px;
     @include maxmq(pc) {
       left: 237px;
     }
@@ -548,6 +549,9 @@ margin-left: 20px;
     @include maxmq(tab) {
       left: 174px;
     }
+    @include maxmq(sp) {
+      left: 140px;
+    }
   }
 }
 
@@ -619,6 +623,10 @@ margin-left: 20px;
 
 .works__item {
   margin-bottom: 39px;
+  padding: 0 25px;
+  @include maxmq(tab) {
+      padding: 0;
+  }
 }
 
 .works__item>.cards__item {
@@ -640,20 +648,16 @@ margin-left: 20px;
   height: 100%;
 }
 .works__title {
-  position: relative;
   display: flex;
   justify-content: center;
   @include maxmq(tab) {
     padding-top: 30px;
   }
   h2 {
+    position: relative;
     font-size: 4.1rem;
     font-weight: bold;
-    @include maxmq(sp) {
-      font-size: 3.2rem;
-    }
-  }
-  &::after {
+     &::after {
     content: "";
     display: inline-block;
     width: 1px;
@@ -662,11 +666,16 @@ margin-left: 20px;
     background-color: #4b6cb7;
     transform: rotate(40deg);
     top: 15px;
-    right: 480px;
-    @include maxmq(tab) {
-      right: 300px;
-      top: 45px;
+    left: 180px;
+    @include maxmq(sp) {
+      left: 146px;
+      top: 10px;
     }
+    }
+    @include maxmq(sp) {
+    font-size: 3.2rem;
+  }
+
   }
 }
 
@@ -771,19 +780,16 @@ margin-left: 20px;
     text-align: center;
     padding-top: 81px;
   }
+
   .recruit__title {
-  position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 45px;
   h2 {
+    position: relative;
     font-size: 4.1rem;
     font-weight: bold;
-    @include maxmq(sp) {
-      font-size: 3.2rem;
-    }
-  }
-  &::after {
+    &::after {
     content: "";
     display: inline-block;
     width: 1px;
@@ -792,9 +798,17 @@ margin-left: 20px;
     background-color: #4b6cb7;
     transform: rotate(40deg);
     top: 15px;
-    right: 450px;
+    left: 213px;
     @include maxmq(tab) {
       right: 237px;
+    }
+    @include maxmq(sp) {
+      left: 170px;
+      top: 10px;
+    }
+  }
+    @include maxmq(sp) {
+      font-size: 3.2rem;
     }
   }
 }
