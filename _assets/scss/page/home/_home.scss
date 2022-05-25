@@ -61,6 +61,12 @@ html {
   display: none;
 }
 
+.-before {
+  @include maxmq(tab) {
+    display: none;
+  }
+}
+
 .headerLogoScroll.-before {
   display: none;
 }
@@ -95,7 +101,13 @@ html {
 /* ========================
 SPメニュー
 ======================== */
-
+.header__sp-logo {
+    margin-top: -15px;
+    margin-left: -19px;
+  @include minmq(tab) {
+    display: none;
+  }
+}
 
 
 /* ========================
@@ -108,6 +120,9 @@ SPメニュー
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+    @include maxmq(sp) {
+    height: 587px;
+  }
 }
 
 .main__inner {
@@ -117,6 +132,12 @@ SPメニュー
   z-index: 10;
   @include maxmq(tab) {
     left: 20px;
+  }
+}
+
+.swiper {
+  @include maxmq(sp) {
+    height: 587px;
   }
 }
 
@@ -131,22 +152,36 @@ SPメニュー
 }
 
 .top__title {
+  font-family: "Lato", sans-serif;
   color: #ffffff;
   font-size: 9.6rem;
   font-weight: 900;
   text-shadow: 4.2px 4.2px 4px rgba(24, 40, 72, 0.5);
   line-height: 1.17;
-  letter-spacing: -7.92px;
+  letter-spacing: 1px;
   margin-bottom: 40px;
   @include maxmq(tab) {
-    font-size: 4.6rem;
+      font-size: 4.6rem;
       letter-spacing: 3px;
       overflow-wrap: break-word;
+  }
+  @include maxmq(sp) {
+    letter-spacing: 0.96px;
+    margin-top: -26px;
+    margin-bottom: 55px;
+  }
+  span {
+    @include maxmq(sp) {
+      display: block;
+    }
   }
 }
 
 .top__text-wrapper {
 margin-left: 20px;
+@include maxmq(sp) {
+  margin-left: 10px;
+}
 }
 
 .top__text {
@@ -154,12 +189,15 @@ margin-left: 20px;
   line-height: 64px;
   color: #182848;
   font-weight: bold;
-  // padding: 12px 48px 21px 58px;
   margin-bottom: 12px;
   margin-top: -25px;
   transform: skewX(-35deg);
   p {
     transform: skewX(35deg);
+  }
+  @include maxmq(sp) {
+    width: 208px;
+    line-height: 36px;
   }
 }
 
@@ -173,6 +211,10 @@ margin-left: 20px;
   p {
     transform: skewX(35deg);
   }
+  @include maxmq(sp) {
+    width: 308px;
+    line-height: 36px;
+  }
 }
 
 .top__text, .top__text2 {
@@ -182,6 +224,10 @@ margin-left: 20px;
   position: relative;
   height: 64px;
   box-shadow: 8px 8px 0px -1px #182848;
+  @include maxmq(sp) {
+    font-size: 1.9rem;
+    height: 36px;
+  }
 }
 
 .top__news {
@@ -196,6 +242,9 @@ margin-left: 20px;
     flex-direction: column;
     background-color: transparent;
   }
+  @include maxmq(sp) {
+    margin-top: 135px;
+  }
 }
 
 .top__news-title {
@@ -208,6 +257,11 @@ margin-left: 20px;
     width: 74px;
     padding-left: 0;
     text-align: center;
+  }
+  @include maxmq(sp) {
+    font-size: 1.4rem;
+    height: 22px;
+    line-height: 22px;
   }
 }
 
@@ -225,6 +279,12 @@ margin-left: 20px;
     margin-left: 0;
     padding-left: 10px;
     border: #182848 1px solid;
+    font-size: 1.4rem;
+  }
+  @include maxmq(sp) {
+    width: 335px;
+    height: 48px;
+    line-height: 48px;
   }
   a {
     transform: skewX(40deg);
@@ -242,6 +302,10 @@ margin-left: 20px;
     font-size: 1.2rem;
     margin-left: 19px;
     border-radius: 6px;
+    @include maxmq(sp) {
+      margin-left: 5px;
+      padding: 3px 9px 5px;
+    }
   }
     &::after {
     content: "";
@@ -263,6 +327,9 @@ margin-left: 20px;
 .new {
   display: inline-block;
   margin-left: 20px;
+  @include maxmq(sp) {
+    margin-left: 0;
+  }
 }
 /* ========================
 事業内容
@@ -274,6 +341,9 @@ margin-left: 20px;
   @include maxmq(pc) {
     margin-top: 40px;
   }
+  @include maxmq(sp) {
+    margin-top: 121px !important;
+  }
 }
 
 .slant-bg {
@@ -283,10 +353,6 @@ margin-left: 20px;
     z-index: -1;
     margin-top: 160px;
     overflow: hidden;
-    // @include maxmq(pc) {
-    //   top: 471px;
-    //   left: 0;
-    // }
     @include maxmq(pc) {
       display: none;
     }
@@ -321,17 +387,20 @@ margin-left: 20px;
   height: auto;
   margin-right: 48px;
   @include maxmq(pc) {
-    // width: 580px;
-  }
-  @include maxmq(pc) {
     margin-right: 0;
     width: 100%;
+  }
+  @include maxmq(sp) {
+    height: 248px;
   }
   img {
     object-fit: cover;
     @include maxmq(pc) {
       width: 100%;
     }
+      @include maxmq(sp) {
+    height: 248px;
+  }
   }
 }
 
@@ -343,7 +412,7 @@ margin-left: 20px;
     font-size: 4.1rem;
     font-weight: bold;
     @include maxmq(sp) {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
     }
   }
   &::after {
@@ -360,8 +429,9 @@ margin-left: 20px;
       left: 237px;
     }
     @include maxmq(sp) {
-      left: 184px;
-      top: 10px;
+      left: 159px;
+      top: 7px;
+      height: 29px;
     }
   }
   @include maxmq(pc) {
@@ -370,7 +440,7 @@ margin-left: 20px;
 }
 
 .services__item {
-    margin-right: 10px;
+  margin-right: 10px;
   &::before {
     content: '';
     position: absolute;
@@ -389,7 +459,7 @@ margin-left: 20px;
     // margin-right: 20px;
   }
   @include maxmq(pc) {
-    padding-top: 40px;
+    padding-top: 36px;
     padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 27px;
@@ -408,12 +478,13 @@ margin-left: 20px;
 .sub__title {
   color: #4b6cb7;
   font-size: 2.4rem;
-  padding-left: 34px;
+  padding-left: 44px;
   padding-top: 20px;
   font-weight: 500;
   @include maxmq(sp) {
     padding-left: 31px;
     padding-top: 10px;
+    font-size: 2rem;
   }
 }
 
@@ -425,6 +496,9 @@ margin-left: 20px;
     @include maxmq(tab) {
     font-size: 2.4rem;
   }
+  @include maxmq(sp) {
+    padding-top: 20px;
+  }
 }
 
 .services__text-contents {
@@ -432,6 +506,13 @@ margin-left: 20px;
   padding-top: 11px;
   padding-bottom: 41px;
   @include l_height(16 , 32);
+  @include maxmq(sp) {
+    padding-top: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 0.2px;
+    line-height: 2;
+    padding-bottom: 26px;
+  }
 }
 
 .link-btn {
@@ -454,6 +535,9 @@ margin-left: 20px;
   &:hover {
     background-color: #ffffff;
     color: #4b6cb7;
+  }
+  @include maxmq(sp) {
+    padding: 15px 40px;
   }
 }
 
@@ -493,6 +577,9 @@ margin-left: 20px;
   @include maxmq(tab) {
     background-image: none;
   }
+  @include maxmq(sp) {
+    margin-top: 83px;
+  }
 }
 
 .background__img {
@@ -520,6 +607,9 @@ margin-left: 20px;
     margin-left: auto;
     padding: 40px 27px 34px 20px;
   }
+  @include maxmq(sp) {
+    padding: 8px 2px 34px 2px;
+  }
 }
 .about__item {
   @include maxmq(tab) {
@@ -533,7 +623,7 @@ margin-left: 20px;
     font-size: 4.1rem;
     font-weight: bold;
     @include maxmq(sp) {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
     }
   }
   &::after {
@@ -550,7 +640,9 @@ margin-left: 20px;
       left: 174px;
     }
     @include maxmq(sp) {
-      left: 140px;
+      left: 126px;
+      top: 4px;
+      height: 27px;
     }
   }
 }
@@ -560,6 +652,13 @@ margin-left: 20px;
   padding-top: 25px;
   padding-bottom: 35px;
   @include l_height(16 , 32);
+    @include maxmq(sp) {
+    font-size: 1.4rem;
+    letter-spacing: 0.1px;
+    line-height: 2;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
 }
 
 .about__img {
@@ -583,6 +682,14 @@ margin-left: 20px;
   position: relative;
   padding-top: 56.25%;
   overflow: hidden;
+  @include maxmq(sp) {
+    width: 100%;
+    height: auto;
+  }
+    img {
+    @include maxmq(sp) {
+      height: 160px;
+    }
 }
 
 .card__img {
@@ -590,6 +697,10 @@ margin-left: 20px;
   top: 45%;
   width: 100%;
   transform: translateY(-50%);
+  @include maxmq(sp) {
+    heihgt: 160px;
+  }
+  }
 }
 
 .card__body {
@@ -623,9 +734,11 @@ margin-left: 20px;
 
 .works__item {
   margin-bottom: 39px;
-  padding: 0 25px;
+  @include maxmq(pc) {
+      padding: 0 25px;
+  }
   @include maxmq(tab) {
-      padding: 0;
+      padding: 0 !important;
   }
 }
 
@@ -638,6 +751,12 @@ margin-left: 20px;
 
 .works__wrapper {
   margin-top: -767px;
+  @include maxmq(tab) {
+    margin-top: 100px;
+  }
+  @include maxmq(sp) {
+    margin-top: 52px;
+  }
 }
 
 .works__inner {
@@ -646,12 +765,45 @@ margin-left: 20px;
   margin-left: auto;
   width: 100%;
   height: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -204px;
+    width: 183vw;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skew(-30deg);
+    z-index: -1;
+    @include minmq(tab) {
+      display: none;
+    }
+  }
+  @include maxmq(tab) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 27px;
+    background-color: #f0f0f0;
+    margin-right: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+  }
+  @include maxmq(sp) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
 }
 .works__title {
   display: flex;
   justify-content: center;
   @include maxmq(tab) {
-    padding-top: 30px;
+    padding-top: 27px;
+  }
+  @include maxmq(sp) {
+    margin-left: -59px;
   }
   h2 {
     position: relative;
@@ -666,14 +818,15 @@ margin-left: 20px;
     background-color: #4b6cb7;
     transform: rotate(40deg);
     top: 15px;
-    left: 180px;
+    left: 192px;
     @include maxmq(sp) {
-      left: 146px;
-      top: 10px;
+      left: 135px;
+      top: 7px;
+      height: 23px;
     }
     }
     @include maxmq(sp) {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   }
@@ -689,18 +842,31 @@ margin-left: 20px;
     text-align: left;
     padding-left: 20px;
   }
+  @include maxmq(sp) {
+    font-size: 2.4rem;
+    padding-top: 19px;
+    padding-left: 20px;
+    padding-right: 27px;
+  }
 }
 
 .works__text-contents {
   text-align: center;
   font-size: 1.6rem;
   padding-top: 21px;
-  padding-bottom: 48px;
+  padding-bottom: 49px;
   @include l_height(16 , 32);
   @include maxmq(tab) {
     padding-left: 20px;
     padding-right: 27px;
     text-align: left;
+  }
+  @include maxmq(sp) {
+    font-size: 1.4rem;
+    padding-top: 18px;
+    padding-left: 20px;
+    padding-right: 27px;
+    padding-bottom: 19px;
   }
 }
 
@@ -732,9 +898,10 @@ margin-left: 20px;
   padding: 19px 14px;
   @include maxmq(tab) {
     position: absolute;
-    bottom: 0;
-    top: 0;
+    top: 120px;
     left: 0;
+    font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -747,7 +914,7 @@ margin-left: 20px;
     overflow: hidden;
     height: 767px;
     @include maxmq(tab) {
-      
+      display: none;
     }
 }
 
@@ -762,6 +929,7 @@ margin-left: 20px;
     transform: skew(40deg);
     z-index: -1;
   }
+
 
   /* ========================
 採用
@@ -778,13 +946,13 @@ margin-left: 20px;
     width: 100%;
     height: 100%;
     text-align: center;
-    padding-top: 81px;
+    padding-top: 74px;
   }
 
   .recruit__title {
   display: flex;
   justify-content: center;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
   h2 {
     position: relative;
     font-size: 4.1rem;
@@ -797,8 +965,8 @@ margin-left: 20px;
     position: absolute;
     background-color: #4b6cb7;
     transform: rotate(40deg);
-    top: 15px;
-    left: 213px;
+    top: 6px;
+    left: 222px;
     @include maxmq(tab) {
       right: 237px;
     }
@@ -971,8 +1139,8 @@ margin-left: 20px;
     position: absolute;
     background-color: #ffffff;
     transform: rotate(40deg);
-    top: 15px;
-    right: 645px;
+    top: 14px;
+    right: 639px;
   }
 }
 
