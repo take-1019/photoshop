@@ -30,6 +30,9 @@ html {
   justify-content: space-between;
   gap: 36px;
   font-size: 1.6rem;
+  @include maxmq(pc) {
+    font-size: 1.2rem;
+  }
     @include maxmq(tab) {
     display: none;
   }
@@ -948,6 +951,11 @@ margin-left: 20px;
     margin-top: 160px;
     background-color: #f0f0f0;
     padding-bottom: 80px;
+    @include maxmq(sp) {
+      background-color: transparent;
+      padding-bottom: 0;
+      margin-top: 38px;
+    }
   }
   .recruit__inner {
     max-width: 1008px;
@@ -959,14 +967,29 @@ margin-left: 20px;
     padding-top: 74px;
   }
 
+  .recruit__inner > .link-btn {
+    @include maxmq(sp) {
+    background-color: #f0f0f0;
+    padding-bottom: 115px;
+    }
+  }
+
   .recruit__title {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  @include maxmq(sp) {
+    justify-content: flex-start;
+    padding-left: 41px;
+    margin-bottom: 28px;
+  }
   h2 {
     position: relative;
     font-size: 4.1rem;
     font-weight: bold;
+    @include maxmq(sp) {
+      font-size: 2.9rem;
+    }
     &::after {
     content: "";
     display: inline-block;
@@ -975,19 +998,17 @@ margin-left: 20px;
     position: absolute;
     background-color: #4b6cb7;
     transform: rotate(40deg);
-    top: 6px;
-    left: 222px;
+    top: 14px;
+    left: 223px;
     @include maxmq(tab) {
       right: 237px;
     }
     @include maxmq(sp) {
       left: 170px;
       top: 10px;
+      height: 25px;
     }
   }
-    @include maxmq(sp) {
-      font-size: 3.2rem;
-    }
   }
 }
 
@@ -1003,6 +1024,10 @@ margin-left: 20px;
     gap: 0;
     padding-bottom: 40px;
   }
+    @include maxmq(sp) {
+    background-color: #f0f0f0;
+    margin-bottom: 0;
+    }
   img {
     @include maxmq(tab) {
     width: 100%;
@@ -1075,37 +1100,19 @@ margin-left: 20px;
     bottom: 46px;
   }
   @include maxmq(sp) {
-    // left: -60px;
+    bottom: 25px;
+    left: 21px;
   }
 }
 
-// .recruit__btn {
-//     position: relative;
-//   padding-right: 2em;
-//   padding-left: 1.38em;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     display: inline-block;
-//     width: 1.5rem;
-//     height: 0.4rem;
-//     top: 50%;
-//     right: 2em;
-//     border-bottom: solid 1px #ffffff;
-//     border-right: solid 1px #ffffff;
-//     -webkit-transform: translateY(-50%) skew(45deg);
-//     transform: translateY(-50%) skew(45deg);
-//   &:hover {
-//     border-bottom: solid 1px #4b6cb7;
-//     border-right: solid 1px #4b6cb7;
-//     }
-//   }
-// }
 
 .recruit__item .btn--arrow-right {
   &::after {
     @include maxmq(tab) {
     right: 8em;
+    }
+    @include maxmq(sp) {
+      right: 9em;
     }
   }
 }
@@ -1127,6 +1134,9 @@ margin-left: 20px;
   margin-left: auto;
   width: 100%;
   height: 100%;
+  @include maxmq(sp) {
+    padding-top: 90px;
+  }
 }
 
 .contact__title {
@@ -1134,11 +1144,15 @@ margin-left: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 22px;
+  @include maxmq(sp) {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
   h2 {
     font-size: 4.1rem;
     font-weight: bold;
     @include maxmq(sp) {
-      font-size: 3.2rem;
+      font-size: 2.9rem;
     }
   }
   &::after {
@@ -1151,11 +1165,19 @@ margin-left: 20px;
     transform: rotate(40deg);
     top: 14px;
     right: 639px;
+    @include maxmq(sp) {
+      right: 185px;
+      top: 10px;
+      height: 24px;
+    }
   }
 }
 
 .contact__subtitle {
   color: #ffffff;
+  @include maxmq(sp) {
+    padding-left: 30px;
+  }
 }
 
 .contact__text {
@@ -1180,6 +1202,10 @@ margin-left: 20px;
     align-items: center;
     gap: 24px;
   }
+  @include maxmq(sp) {
+    margin-top: 24px;
+    padding-bottom: 93px;
+  }
 }
 
 .construction-btn {
@@ -1201,6 +1227,15 @@ margin-left: 20px;
     border-right: solid 1px #ffffff;
     -webkit-transform: translateY(-50%) skew(45deg);
     transform: translateY(-50%) skew(45deg);
+    @include maxmq(sp) {
+      right: 2em;
+    }
+  }
+  @include maxmq(sp) {
+    width: 335px;
+    padding-left: 125px;
+    font-size: 1.4rem;
+    padding-top: 17px;
   }
 }
 
@@ -1209,16 +1244,14 @@ margin-left: 20px;
   background-color: #191919;
   position: relative;
   text-align: left;
-    padding-left: 95px;
-    padding-top: 28px;
-  //   &::before {
-  //   content: "";
-  //   background: url(../img/pc/Factory.svg) !important;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   height: 300px;
-  //   width: 200px;
-  // }
+  padding-left: 95px;
+  padding-top: 28px;
+  @include maxmq(sp) {
+    width: 335px;
+    padding-left: 112px;
+    font-size: 1.4rem;
+    padding-top: 18px;
+  }
 }
 
 .construction, .order {
@@ -1239,6 +1272,9 @@ margin-left: 20px;
     border-right: solid 1px #ffffff;
     -webkit-transform: translateY(-50%) skew(45deg);
     transform: translateY(-50%) skew(45deg);
+    @include maxmq(sp) {
+      right: 2em;
+    }
   }
 }
 
@@ -1247,6 +1283,9 @@ margin-left: 20px;
   top: 50%;
   transform: translateY(-50%);
   left: 70px;
+  @include maxmq(sp) {
+    left: 22px;
+  }
 }
 
 .order-icon {
@@ -1254,6 +1293,9 @@ margin-left: 20px;
   top: 50%;
   transform: translateY(-50%);
   left: 59px;
+    @include maxmq(sp) {
+    left: 22px;
+  }
 }
 
 /* ========================
@@ -1293,6 +1335,7 @@ margin-left: 20px;
   }
   @include maxmq(sp) {
     flex-direction: column-reverse;
+    padding-bottom: 34px;
   }
 }
 
@@ -1301,6 +1344,10 @@ margin-left: 20px;
   letter-spacing: 3.5px;
   @include maxmq(tab) {
     writing-mode: horizontal-tb;
+  }
+  @include maxmq(sp) {
+    font-size: 1.4rem;
+    letter-spacing: 0px;
   }
   li {
     padding-left: 22px;
@@ -1316,7 +1363,7 @@ margin-left: 20px;
         padding-left: 22px;
       }
       @include maxmq(sp) {
-      padding-top: 64px;
+      padding-top: 32px;
       padding-left: 0;
     }
     }
@@ -1326,6 +1373,10 @@ margin-left: 20px;
 .company {
   li {
     margin-bottom: 20px;
+    @include maxmq(sp) {
+      margin-bottom: 11px;
+      font-size: 1.4rem;
+    }
   }
   @include maxmq(sp) {
     // background-image: url(../img/sp/logo-w-1-sp.svg);
@@ -1333,12 +1384,18 @@ margin-left: 20px;
   }
 }
 
+.adress {
+  @include maxmq(sp) {
+    display: inline-block;
+  }
+}
+
 .sp-logo {
   display: none;
   @include maxmq(sp) {
     display: block;
-    padding-top: 81px;
-    padding-bottom: 23px;
+    padding-top: 55px;
+    padding-bottom: 19px;
   }
 }
 
@@ -1354,5 +1411,6 @@ margin-left: 20px;
     line-height: 42px;
     height: 42px;
     padding-left: 20px;
+    font-size: 1rem;
   }
 }

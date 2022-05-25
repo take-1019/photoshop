@@ -54,3 +54,10 @@ $(function () {
     $nav.removeClass(open);
   });
 })(jQuery);
+
+AOS.init({
+  delay: 200,
+  duration: 500,
+  easing: "ease-out",
+  anchorPlacement: "top-center",
+});

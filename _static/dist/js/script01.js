@@ -8,18 +8,18 @@ let mySwiper = new Swiper(".swiper", {
   speed: 2000,
 });
 
-// $(function () {
-//   $(window).on("load scroll", function () {
-//     var $header = $(".header");
+$(function () {
+  $(window).on("load scroll", function () {
+    var $header = $(".header");
 
-//     // 200以上スクロールしたら処理
-//     if ($(window).scrollTop() > 600) {
-//       $header.addClass("sticky", "headerLogoScroll");
-//     } else {
-//       $header.removeClass("sticky", "headerLogoScroll");
-//     }
-//   });
-// });
+    // 200以上スクロールしたら処理
+    if ($(window).scrollTop() > 600) {
+      $header.addClass("sticky", "headerLogoScroll");
+    } else {
+      $header.removeClass("sticky", "headerLogoScroll");
+    }
+  });
+});
 
 // スクロールするとロゴ画像変更
 $(function () {
@@ -54,3 +54,10 @@ $(function () {
     $nav.removeClass(open);
   });
 })(jQuery);
+
+AOS.init({
+  delay: 200,
+  duration: 500,
+  easing: "ease-out",
+  anchorPlacement: "top-center",
+});
