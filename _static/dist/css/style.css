@@ -1437,7 +1437,7 @@ nav
   left: -300px;
   bottom: 0;
   width: 300px;
-  background: #ffffff;
+  background: #4b6cb7;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -1450,22 +1450,38 @@ nav
 .open nav {
   left: 0;
   opacity: 1;
+  width: 100vw;
+  height: 90vh;
+}
+.open nav span {
+  display: block;
+  font-size: 2rem;
 }
 
 nav .inner {
   padding: 25px;
+}
+nav .inner img {
+  margin-bottom: 100px;
+  width: 200px;
+  margin-left: 15px;
 }
 
 nav .inner ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 nav .inner ul li {
   position: relative;
   margin: 0;
-  border-bottom: 1px solid #333;
+  font-size: 3.6rem;
+  padding-bottom: 40px;
+}
+nav .inner ul li:hover {
+  color: #000;
 }
 
 nav .inner ul li a {
@@ -2044,6 +2060,24 @@ nav .inner ul li a:hover {
     padding-left: 20px;
     font-size: 1rem;
   }
+  .open nav span {
+    font-size: 1.4rem;
+  }
+  nav .inner {
+    padding-top: 14px;
+  }
+  nav .inner img {
+    margin-bottom: 92px;
+    width: auto;
+    margin-left: 0;
+  }
+  nav .inner ul li {
+    font-size: 2rem;
+    padding-bottom: 8px;
+  }
+  nav .inner ul li:first-child {
+    padding-bottom: 36px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .services__item::before {
@@ -2075,6 +2109,18 @@ nav .inner ul li a:hover {
   /*============
   #mask
   =============*/
+  .open .toggle_btn {
+    display: block;
+    position: fixed;
+    top: 16px;
+    right: 13px;
+    width: 28px;
+    height: 30px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 3;
+  }
   .toggle_btn span {
     display: block;
     position: absolute;
@@ -2129,6 +2175,9 @@ nav .inner ul li a:hover {
 }
 @media screen and (max-width: 767px) and (min-width: 768px) {
   .toggle_btn {
+    display: none;
+  }
+  .open .toggle_btn {
     display: none;
   }
 }
