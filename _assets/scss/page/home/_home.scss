@@ -572,7 +572,7 @@ margin-left: 20px;
 園崎組について
 ======================== */
 .about__wrapper {
-  background-image: url(../img/pc/background-image-about.jpg);
+  background-image: url(../img/PC/background-image-about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 159px;
@@ -588,7 +588,7 @@ margin-left: 20px;
 
 .background__img {
   @include maxmq(tab) {
-    background-image: url(../img/pc/background-image-about.jpg);
+    background-image: url(../img/PC/background-image-about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 248px;
@@ -1132,7 +1132,7 @@ margin-left: 20px;
 お問い合わせ
 ======================== */
 .contact__wrapper {
-  background-image: url(../img/pc/bckground-image-contact.jpg);
+  background-image: url(../img/PC/bckground-image-contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1235,8 +1235,11 @@ margin-left: 20px;
   background-color: #b8614b;
   position: relative;
   text-align: left;
-    padding-left: 113px;
-    padding-top: 28px;
+  padding-left: 113px;
+  padding-top: 28px;
+  &:hover {
+    opacity: 0.7;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -1271,6 +1274,9 @@ margin-left: 20px;
   text-align: left;
   padding-left: 95px;
   padding-top: 28px;
+  &:hover {
+    opacity: 0.7;
+  }
   @include maxmq(sp) {
     width: 335px;
     padding-left: 112px;
@@ -1386,6 +1392,9 @@ margin-left: 20px;
   }
   li {
     padding-left: 22px;
+    &:hover {
+      opacity: 0.7;
+    }
     @include maxmq(tab) {
       padding-bottom: 22px;
     }

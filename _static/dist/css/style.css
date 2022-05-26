@@ -905,7 +905,7 @@ SPメニュー
 園崎組について
 ======================== */
 .about__wrapper {
-  background-image: url(../img/pc/background-image-about.jpg);
+  background-image: url(../img/PC/background-image-about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 159px;
@@ -1228,7 +1228,7 @@ SPメニュー
 お問い合わせ
 ======================== */
 .contact__wrapper {
-  background-image: url(../img/pc/bckground-image-contact.jpg);
+  background-image: url(../img/PC/bckground-image-contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1307,6 +1307,9 @@ SPメニュー
   padding-left: 113px;
   padding-top: 28px;
 }
+.construction-btn:hover {
+  opacity: 0.7;
+}
 .construction-btn::after {
   content: "";
   position: absolute;
@@ -1328,6 +1331,9 @@ SPメニュー
   text-align: left;
   padding-left: 95px;
   padding-top: 28px;
+}
+.order-btn:hover {
+  opacity: 0.7;
 }
 
 .construction, .order {
@@ -1409,6 +1415,9 @@ SPメニュー
 }
 .footer__menu li {
   padding-left: 22px;
+}
+.footer__menu li:hover {
+  opacity: 0.7;
 }
 .footer__menu li:nth-child(5) {
   padding-left: 70px;
@@ -1700,7 +1709,7 @@ nav .inner ul li a:hover {
     background-image: none;
   }
   .background__img {
-    background-image: url(../img/pc/background-image-about.jpg);
+    background-image: url(../img/PC/background-image-about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 248px;
