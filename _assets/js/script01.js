@@ -8,18 +8,18 @@ let mySwiper = new Swiper(".swiper", {
   speed: 2000,
 });
 
-$(function () {
-  $(window).on("load scroll", function () {
-    var $header = $(".header");
+// $(function () {
+//   $(window).on("load scroll", function () {
+//     var $header = $(".header");
 
-    // 200以上スクロールしたら処理
-    if ($(window).scrollTop() > 600) {
-      $header.addClass("sticky", "headerLogoScroll");
-    } else {
-      $header.removeClass("sticky", "headerLogoScroll");
-    }
-  });
-});
+//     // 200以上スクロールしたら処理
+//     if ($(window).scrollTop() > 600) {
+//       $header.addClass("sticky", "headerLogoScroll");
+//     } else {
+//       $header.removeClass("sticky", "headerLogoScroll");
+//     }
+//   });
+// });
 
 // スクロールするとロゴ画像変更
 $(function () {
@@ -61,3 +61,16 @@ AOS.init({
   easing: "ease-out",
   anchorPlacement: "top-center",
 });
+
+// クラス変更
+window.onload = function () {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+}
+
+//safari対策
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
