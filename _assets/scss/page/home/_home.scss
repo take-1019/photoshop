@@ -66,16 +66,32 @@ html {
 
 .-before {
   @include maxmq(tab) {
+    display: block;
+  }
+  @include maxmq(tab) {
     display: none;
   }
+}
+
+.header__sp-logo {
+  display: block;
 }
 
 .headerLogoScroll.-before {
   display: none;
 }
 
-.headerLogoScroll.-after {
+.header__sp-logo-after {
+    display: none;
+}
+
+.headerLogoScroll.header__sp-logo-after {
   display: block;
+  @include maxmq(sp) {
+      display: block;
+      margin-top: -10px;
+      margin-left: -10px;
+  }
 }
 
 /* スティッキー時に.stickyクラスを追加 */
@@ -101,14 +117,20 @@ html {
     color: #000000;
   }
 }
+
+.headerLogoScroll.header__sp-logo {
+  display: none;
+}
+
 /* ========================
 SPメニュー
 ======================== */
 .header__sp-logo {
+  display: none;
     margin-top: -15px;
     margin-left: -19px;
-  @include minmq(tab) {
-    display: none;
+  @include maxmq(tab) {
+    display: block;
   }
 }
 
@@ -132,7 +154,14 @@ SPメニュー
   position: absolute;
   top: 107px;
   left: 174px;
+  left: 10%;
   z-index: 10;
+  @include maxmq(full) {
+    // left: calc(50% - 31.75rem);
+  }
+  @include maxmq(pc) {
+    left: 100px;
+  }
   @include maxmq(tab) {
     left: 20px;
   }
@@ -163,8 +192,11 @@ SPメニュー
   line-height: 1.17;
   letter-spacing: 1px;
   margin-bottom: 40px;
+    @include maxmq(full) {
+    font-size: 6.4rem;
+  }
   @include maxmq(tab) {
-      font-size: 4.6rem;
+      font-size: 4.6rem !important;
       letter-spacing: 3px;
       overflow-wrap: break-word;
   }
@@ -174,7 +206,7 @@ SPメニュー
     margin-bottom: 55px;
   }
   span {
-    @include maxmq(sp) {
+    @include maxmq(tab) {
       display: block;
     }
   }
@@ -198,6 +230,9 @@ margin-left: 20px;
   p {
     transform: skewX(35deg);
   }
+    @include maxmq(pc) {
+    width: 280px;
+  }
   @include maxmq(sp) {
     width: 208px;
     line-height: 36px;
@@ -214,6 +249,9 @@ margin-left: 20px;
   p {
     transform: skewX(35deg);
   }
+  @include maxmq(pc) {
+    width: 420px;
+  }
   @include maxmq(sp) {
     width: 308px;
     line-height: 36px;
@@ -227,6 +265,9 @@ margin-left: 20px;
   position: relative;
   height: 64px;
   box-shadow: 8px 8px 0px -1px #182848;
+  @include maxmq(pc) {
+    font-size: 2.8rem;
+  }
   @include maxmq(sp) {
     font-size: 1.9rem;
     height: 36px;
@@ -241,7 +282,7 @@ margin-left: 20px;
   line-height: 64px;
   background-color: #182848;
   width: 1017px;
-  @include maxmq(tab) {
+  @include maxmq(pc) {
     flex-direction: column;
     background-color: transparent;
   }
@@ -276,6 +317,9 @@ margin-left: 20px;
   background-color: #ffffff;
   transform: skewx(-40deg);
   margin-left: -22px;
+  @include maxmq(pc) {
+    width: 80%;
+  }
   @include maxmq(tab) {
     width: 65%;
     transform: none;
@@ -407,6 +451,45 @@ margin-left: 20px;
   }
 }
 
+_::-webkit-full-page-media, _:future, :root .services__title::after {
+    left: 295px;
+    @include maxmq(sp) {
+      left: 196px;
+    }
+}
+
+_::-webkit-full-page-media, _:future, :root .about__title::after {
+    right: 163px;
+        @include maxmq(sp) {
+      left: 145px;
+      top: 9px;
+    }
+}
+
+_::-webkit-full-page-media, _:future, :root .works__title h2::after {
+    left: 232px;
+        @include maxmq(sp) {
+      left: 156px;
+      top: 10px;
+    }
+}
+
+_::-webkit-full-page-media, _:future, :root .recruit__title h2::after {
+    left: 262px;
+        @include maxmq(sp) {
+      left: 176px;
+    }
+}
+
+_::-webkit-full-page-media, _:future, :root .contact__title::after {
+    left: 423px;
+        @include maxmq(sp) {
+      left: 218px;
+      top: 99px;
+    }
+}
+
+
 .services__title {
   position: relative;
   display: flex;
@@ -430,12 +513,17 @@ margin-left: 20px;
     top: 15px;
     left: 240px;
     @include maxmq(pc) {
-      left: 237px;
+      left: 277px;
+    }
+    @include maxmq(tab) {
     }
     @include maxmq(sp) {
       left: 159px;
       top: 7px;
       height: 29px;
+      _::-webkit-full-page-media, _:future, :root body.lock {
+      left: 280px;
+      }
     }
   }
   @include maxmq(pc) {
@@ -595,8 +683,6 @@ margin-left: 20px;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
-    // padding-right: 20px;
-    // padding-left: 20px;
   }
 }
 
@@ -685,7 +771,6 @@ margin-left: 20px;
 .card__img-wrapper {
   position: relative;
   padding-top: 56.25%;
-  // overflow: hidden;
   @include maxmq(tab) {
     width: 100%;
   }
@@ -1423,8 +1508,6 @@ margin-left: 20px;
     }
   }
   @include maxmq(sp) {
-    // background-image: url(../img/sp/logo-w-1-sp.svg);
-    // background-repeat: no-repeat;
   }
 }
 
