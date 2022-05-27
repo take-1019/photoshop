@@ -154,11 +154,8 @@ SPメニュー
   position: absolute;
   top: 107px;
   left: 174px;
-  left: 10%;
+  left: 13%;
   z-index: 10;
-  @include maxmq(full) {
-    // left: calc(50% - 31.75rem);
-  }
   @include maxmq(pc) {
     left: 100px;
   }
@@ -181,6 +178,16 @@ SPメニュー
     overflow: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    @include maxmq(tab) {
+      display: none;
+    }
+}
+
+.swiper-wrapper .sp-slide {
+  display: none;
+  @include maxmq(tab) {
+    display: block;
+  }
 }
 
 .top__title {
@@ -192,13 +199,21 @@ SPメニュー
   line-height: 1.17;
   letter-spacing: 1px;
   margin-bottom: 40px;
-    @include maxmq(full) {
+  h1 {
+    @include maxmq(sp) {
+      font-size: 4rem;
+    }
+    @include maxmq(xs) {
+      font-size: 3.4rem;
+    }
+  }
+  @include maxmq(full) {
     font-size: 6.4rem;
   }
   @include maxmq(tab) {
-      font-size: 4.6rem !important;
+      font-size: 4.8rem !important;
       letter-spacing: 3px;
-      overflow-wrap: break-word;
+      white-space: nowrap;
   }
   @include maxmq(sp) {
     letter-spacing: 0.96px;
@@ -237,6 +252,9 @@ margin-left: 20px;
     width: 208px;
     line-height: 36px;
   }
+    @include maxmq(xs) {
+    width: 190px;
+  }
 }
 
 .top__text2 {
@@ -250,11 +268,14 @@ margin-left: 20px;
     transform: skewX(35deg);
   }
   @include maxmq(pc) {
-    width: 420px;
+    width: 400px;
   }
   @include maxmq(sp) {
     width: 308px;
     line-height: 36px;
+  }
+  @include maxmq(xs) {
+    width: 270px;
   }
 }
 
@@ -282,12 +303,22 @@ margin-left: 20px;
   line-height: 64px;
   background-color: #182848;
   width: 1017px;
+  @include maxmq(full) {
+    width: 830px;
+  }
   @include maxmq(pc) {
+    width: 650px !important;
+  }
+  @include maxmq(tab) {
     flex-direction: column;
     background-color: transparent;
   }
   @include maxmq(sp) {
+    width: 100% !important;
     margin-top: 135px;
+  }
+  @include maxmq(xs) {
+
   }
 }
 
@@ -296,6 +327,10 @@ margin-left: 20px;
   background-color: #182848;
   width: 175px;
   padding-left: 42px;
+  @include maxmq(pc) {
+    width: 120px;
+    padding-left: 20px;
+  }
   @include maxmq(tab) {
     display: inline;
     width: 74px;
@@ -317,11 +352,16 @@ margin-left: 20px;
   background-color: #ffffff;
   transform: skewx(-40deg);
   margin-left: -22px;
+  @include maxmq(full) {
+    width: 580px;
+  }
   @include maxmq(pc) {
-    width: 80%;
+    width: 460px !important;
+    padding-left: 30px;
   }
   @include maxmq(tab) {
     width: 65%;
+    width: 450px;
     transform: none;
     margin-left: 0;
     padding-left: 10px;
@@ -329,9 +369,14 @@ margin-left: 20px;
     font-size: 1.4rem;
   }
   @include maxmq(sp) {
-    width: 335px;
+    white-space: nowrap;
+    width: 100% !important;
     height: 48px;
     line-height: 48px;
+  }
+  @include maxmq(xs) {
+    width: 85%;
+    font-size: 1.2rem;
   }
   a {
     transform: skewX(40deg);
@@ -365,6 +410,9 @@ margin-left: 20px;
     position: absolute;
     -webkit-transform: translateY(-50%) skew(45deg);
     transform: translateY(-50%) skew(45deg);
+    @include maxmq(tab) {
+      display: none;
+    }
   }
   time {
     letter-spacing: -1px;
